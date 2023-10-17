@@ -1,0 +1,2 @@
+- PHP recursively stands for PHP Hypertext Preprocessor
+- It is a server side scripting language. So, it runs in server
