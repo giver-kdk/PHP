@@ -6,7 +6,7 @@
 	if(isset($_POST["submit"]))		// '$_GET' is a predefined global associative array
 	{
 		// This code runs only when submit button sets value of variables
-		echo htmlspecialchars($_POST['email']);		// Access form fields value using their 'name'
+		echo htmlspecialchars($_POST['email']);		// Access form fields 'value' using their 'name'
 		echo "<br>";
 		// 'htmlspecialchars' blocks attacker's JS code from running in browser
 		echo htmlspecialchars($_POST['title']);

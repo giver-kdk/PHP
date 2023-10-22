@@ -3,7 +3,7 @@
 	// Variables to persist their value on reload
 	$email = $title = $ingredient = "";
 	$error = ["emailError"=>"", "titleError"=>"", "ingredientError"=>""];
-	if(isset($_POST["submit"]))		// '$_GET' is a predefined global associative array
+	if(isset($_POST["submit"]))		// '$_POST' is a predefined global associative array
 	{
 		// 'empty()' checks if the variable is empty or not
 		if(empty($_POST["email"]))

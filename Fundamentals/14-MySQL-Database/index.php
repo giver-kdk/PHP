@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,19 @@
 			text-align: center;
 			margin: 0.5rem;
 		}
+		.card-group
+		{
+			gap: 1rem;
+			/* margin: 1rem; */
+		}
+		.card
+		{
+			border-radius: 7px !important;
+		}
+		.card__wrapper
+		{
+			padding: 1rem;
+		}
 	</style>
 </head>
 <body>
@@ -23,5 +37,28 @@
 	<div class="btn__box">
 		<a href="./add.php"><button type="button" class="btn btn-primary">Add Pizza</button></a>
 	</div>
+	<?php
+		include "connect_db.php";
+		$sql = "SELECT * FROM pizza";
+		// Execute the SQL Query and store result
+		$result = $conn->query($sql);
+		// 'fetch_assoc()' returns next row data everytime as associative array
+		echo "<br><strong>Pizza List: </strong><br>";
+		echo "<div class='card__wrapper'>";
+		while($row = $result->fetch_assoc())
+		{
+			echo "
+			<div class='card-group'>
+				<div class='card text-white bg-info mb-3' style='max-width: 18rem;'>
+				<div class='card-header'>". $row['title'] . "</div>
+				<div class='card-body'>
+				<h5 class='card-title'>By: " . $row['email'] . "</h5>
+				<p class='card-text'>Ingredient: The main ingredients used to make this pizza are: " . $row['ingredient'] . ".</p>
+				</div>
+			</div>
+			";
+		}
+		echo "</div>";
+	?>
 </body>
 </html>

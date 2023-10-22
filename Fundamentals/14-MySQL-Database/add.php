@@ -68,8 +68,18 @@
 		// LOGIC: If no errors, then 'array_filter()' returns emtpy and negation of 'empty' is true
 		if(!array_filter($error))			
 		{
-			// Routes to 'index.php' 
-			header("Location: index.php");	
+			// Here, we don't have to inserr 'id' cause it starts with 1 autoincrements 
+			$sql = "INSERT INTO pizza(email, title, ingredient) VALUES('$email', '$title', '$ingredient')";
+			$result = $conn->query($sql);
+			if($result)
+			{
+				// Routes to 'index.php' 
+				header("Location: index.php");	
+			}
+			else
+			{
+				echo "Insetion Failed!";
+			}
 		}
 	}
 ?>
