@@ -1,0 +1,8 @@
+Hello Worlds! We are going to learn file handling in PHP.
+It's similar to file handling in C-Program.
+We can perform CRUD operation in file using PHP.
+This is new content being overwritten from last point of reading it.
+
+This is new content being overwritten from last point of reading it.
+
+This is new content being overwritten from last point of reading it.
