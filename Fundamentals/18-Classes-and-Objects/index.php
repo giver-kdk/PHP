@@ -5,7 +5,7 @@
 		public $roll;
 		// Private variable which needs to be accessed via internal function 
 		private $symbol;
-		// Constructoer function 
+		// Constructor function 
 		public function __construct($name = "Guest", $roll=0)
 		{
 			// Set variable of object as specified 
